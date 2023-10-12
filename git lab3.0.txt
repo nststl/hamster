@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+class Product {
+private:
+    int price;
+    std::string productName;
+
+public:
+    Product(int price, const std::string& productName) {
+        this->price = price;
+        this->productName = productName;
+    }
+
+    int getPrice() const {
+        return price;
+    }
+
+    const std::string& getProductName() const {
+        return productName;
+    }
+};
+
+int main() {
+    // Створюємо об'єкти продуктів
+    Product product1(65, "Круасан");
+    Product product2(30, "Кава");
+
+    // Виводимо інформацію про продукти у консоль
+    std::cout << "Product: " << product1.getProductName() << ", Price: " << product1.getPrice() << std::endl;
+    std::cout << "Product: " << product2.getProductName() << ", Price: " << product2.getPrice() << std::endl;
+
+    return 0;
+}

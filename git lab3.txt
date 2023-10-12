@@ -1,0 +1,32 @@
+using System;
+
+class Product
+{
+    public int Price { get; set; }
+    public string ProductName { get; set; }
+
+    public Product(int price, string productName)
+    {
+        Price = price;
+        ProductName = productName;
+    }
+
+    public override string ToString()
+    {
+        return $"Product: {ProductName}, Price: {Price}";
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Створюємо об'єкти продуктів
+        Product product1 = new Product(65, "Круасан");
+        Product product2 = new Product(30, "Кава");
+
+        // Виводимо інформацію про продукти у консоль
+        Console.WriteLine(product1);
+        Console.WriteLine(product2);
+    }
+}
